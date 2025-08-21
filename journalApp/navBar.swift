@@ -1,6 +1,6 @@
 //
 //  navBar.swift
-//  journalApp
+//  JournalApp
 //
 //  Created by Kailey Liou on 8/20/25.
 //

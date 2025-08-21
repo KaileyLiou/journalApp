@@ -1,6 +1,6 @@
 //
-//  journalAppApp.swift
-//  journalApp
+//  JournalAppApp.swift
+//  JournalApp
 //
 //  Created by Kailey Liou on 8/20/25.
 //
