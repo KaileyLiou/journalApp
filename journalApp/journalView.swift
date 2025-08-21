@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct journalView: View {
-    @Query(sort: \JournalEntryModel.date, order: .reverse) var entries: (JournalEntryModel)
+    @Query(sort: \JournalEntryModel.date, order: .reverse) var entries: [JournalEntryModel]
     
     var body: some View {
         Navbar()
@@ -40,11 +40,12 @@ struct journalView: View {
                 .padding()
                 .background(
                     RoundedRectangle(cornerRadius:25)
-                        .stroke(Color(red:235/255, green: 178/255, blue: 210/255))
+                        .stroke(Color(red: 235/255, green: 178/255, blue: 210/255), lineWidth: 5)
                 )
                 .foregroundStyle(Color.purple)
             }
-            NavigationLink(destination: NewJournalView()) {
+            
+            NavigationLink(destination: ContentView()) {
                 VStack{
                     Image(systemName: "house.fill")
                         .imageScale(.large)
@@ -53,13 +54,14 @@ struct journalView: View {
                 .padding()
                 .background(
                     RoundedRectangle(cornerRadius:25)
-                        .stroke(Color(red:235/255, green: 178/255, blue: 210/255))
+                        .stroke(Color(red: 235/255, green: 178/255, blue: 210/255), lineWidth: 5)
                 )
-                .foregroundStyle(Color.purple)
+                .foregroundStyle(Color(red: 235/255, green: 178/255, blue: 210/255))
+            }
         }
     }
 }
 
 #Preview {
-    JournalView()
+    journalView()
 }
