@@ -14,25 +14,26 @@ struct ContentView: View {
                 navBar()
                 Text("Journaling has mental and physical benefits. You should journal today.")
                     .multilineTextAlignment(.center)
-                    .foregroundStyle(Color.white)
+                    .foregroundStyle(.white)
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius: 25)
-                            .foregroundStyle(Color(red: 170/255, green: 218/255, blue: 255/255))
+                            .foregroundStyle(Color(red: 178/255, green: 218/255, blue: 235/255))
                     )
                     .padding()
                 
                 NavigationLink(destination: NewJournalView()){
                     VStack{
-                        Image(systemName: "book.page.fill")
+                        Image(systemName: "book.pages.fill")
                             .imageScale(.large)
                         Text("Add Journal Entry")
                     }
+                    .padding()
                     .background(
                         RoundedRectangle(cornerRadius: 25)
-                            .foregroundStyle(Color(red: 178/255, green: 218/255, blue: 235/255))
+                            .stroke(Color(red: 235/255, green: 178/255, blue: 210/255), lineWidth: 5)
                     )
-                    .foregroundStyle(Color.purple)
+                    .foregroundStyle(Color(red: 235/255, green: 178/255, blue: 210/255))
                     .padding()
                 }
             }

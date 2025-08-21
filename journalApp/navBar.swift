@@ -17,7 +17,7 @@ struct navBar: View {
             Text("Mood Journaling!")
                 .foregroundStyle(.white)
         }
-        
+        .frame(maxWidth: .infinity)
         .background(Color(red: 188/255, green: 219/255, blue: 178/255))
     }
 }

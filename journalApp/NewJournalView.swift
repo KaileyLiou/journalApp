@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct NewJournalView: View {
     @Environment(\.modelContext) private var context
@@ -14,7 +15,7 @@ struct NewJournalView: View {
     
     var body: some View {
         NavigationStack {
-            Navbar()
+            navBar()
                 .navigationBarBackButtonHidden(true)
             
             VStack{
@@ -56,16 +57,16 @@ struct NewJournalView: View {
             Spacer()
             
             HStack{
-                NavigationLink(destination: NewJournalView()) {
+                NavigationLink(destination: journalView()) {
                     VStack{
                         Image(systemName: "book.pages.fill")
                             .imageScale(.large)
-                        Text("Write a Journal")
+                        Text("Past Journals")
                     }
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius:25)
-                            .stroke(Color(red: 235/255, green: 178/255, blue: 210/255))
+                            .stroke(Color(red: 235/255, green: 178/255, blue: 210/255), lineWidth: 5)
                     )
                     .foregroundStyle(Color.purple)
                 }
@@ -79,9 +80,9 @@ struct NewJournalView: View {
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius:25)
-                            .stroke(Color(red: 235/255, green: 178/255, blue: 210/255))
+                            .stroke(Color(red: 235/255, green: 178/255, blue: 210/255), lineWidth: 5)
                     )
-                    .foregroundStyle(Color.purple)
+                    .foregroundStyle(Color(red: 235/255, green: 178/255, blue: 210/255))
                 }
             }
         }

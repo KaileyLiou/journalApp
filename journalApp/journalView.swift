@@ -12,7 +12,7 @@ struct journalView: View {
     @Query(sort: \JournalEntryModel.date, order: .reverse) var entries: [JournalEntryModel]
     
     var body: some View {
-        Navbar()
+        navBar()
             .navigationBarBackButtonHidden(true)
         
         List(entries) { entry in
